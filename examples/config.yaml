@@ -1,0 +1,13 @@
+# Example ~/.continue/config.yaml for Continue (IDE and the cn CLI) after `python3 tools/install_continue.py --global`.
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Keep your own models; only the mcpServers entry matters. The model below is a local Ollama model (no account or key).
+name: My Config
+version: 0.0.1
+schema: v1
+models:
+  - name: Local model
+    provider: ollama
+    model: qwen2.5-coder:7b
+    roles: [chat, edit, apply]
+mcpServers:
+  - uses: ./mcpServers/spindoctor-qwerty.yaml
